@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="HorribleCodePullRequest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HorribleCodePullRequest_jar</output-path>
+    <root id="archive" name="HorribleCodePullRequest.jar">
+      <element id="module-output" name="HorribleCodePullRequest" />
+    </root>
+  </artifact>
+</component>
