@@ -3,87 +3,61 @@ import java.util.Random; // Import the Random class for generating random troll 
 import java.util.Scanner; // Import the Scanner class for user input.
 
 public class Main { // Define the main class.
-    public static void main(String[] args) { // Define the main method.
-        Scanner scanner = new Scanner(System.in); // Create a Scanner object for user input.
-        Random random = new Random(); // Create a Random object for random troll sentence selection.
+        public static void main(String[] args) {
+            // Create a Scanner object to read user input
+            Scanner scanner = new Scanner(System.in);
+            // Create a Random object to generate random numbers
+            Random random = new Random();
 
-        System.out.println("Press the spacebar to get a troll sentence (press any other key to exit).");
+            // Prompt the user to press the spacebar and hit Enter
+            System.out.println("Press the spacebar and hit Enter to see a troll sentence (or type 'exit' to quit):");
+            while (true) {
+                // Read user input
+                String userInput = scanner.nextLine();
 
-        while (true) { // Start an infinite loop.
-            char input = scanner.next().charAt(0); // Read the user's input character.
-
-            if (input == ' ') { // Check if the input is the spacebar.
-                int randomNumber = random.nextInt(20); // Generate a random number between 0 and 19.
-                switch (randomNumber) { // Start a switch statement for troll sentence selection.
-                    case 0:
-                        System.out.println("You just got trolled!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 1:
-                        System.out.println("Haha, you fell for it!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 2:
-                        System.out.println("This is a troll message!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 3:
-                        System.out.println("You can't escape the troll!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 4:
-                        System.out.println("Trolled again!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 5:
-                        System.out.println("You're in Troll Town now!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 6:
-                        System.out.println("The troll is strong with this one!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 7:
-                        System.out.println("Trollolololol!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 8:
-                        System.out.println("Trolled!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 9:
-                        System.out.println("You fell right into my trap!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 10:
-                        System.out.println("Expecto Trollronum!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 11:
-                        System.out.println("Trolltastic!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 12:
-                        System.out.println("Trollin' ain't easy!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 13:
-                        System.out.println("Troll level over 9000!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 14:
-                        System.out.println("Trolling you softly!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 15:
-                        System.out.println("Prepare for maximum trollage!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 16:
-                        System.out.println("Trollception!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 17:
-                        System.out.println("You've been trolled, my friend."); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 18:
-                        System.out.println("This is just the beginning of the troll parade!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
-                    case 19:
-                        System.out.println("Another troll sentence!"); // Print a troll sentence.
-                        break; // Exit the switch statement.
+                // Check if the user wants to exit
+                if (userInput.equalsIgnoreCase("exit")) {
+                    System.out.println("Goodbye!");
+                    // Exit the loop
+                    break;
                 }
-            } else {
-                System.out.println("Exiting the program."); // Print an exit message.
-                break; // Exit the while loop.
-            }
-        }
-    }
 
-    static class ExtraFunctionality {
+                // Check if the user's input is empty (spacebar pressed)
+                if (userInput.equals(" ")) {
+                    // Generate a random index between 0 and 19
+                    int randomIndex = random.nextInt(20);
+                    // Use a switch statement to select a troll sentence based on the random index
+                    switch (randomIndex) {
+                        case 0:
+                            System.out.println("You must be a professional keyboard smasher!");
+                            break;
+                        case 1:
+                            System.out.println("Wow, you're really good at pressing that spacebar!");
+                            break;
+                        case 2:
+                            System.out.println("Congratulations, you just discovered the spacebar!");
+                            break;
+                        case 3:
+                            System.out.println("Is the spacebar your best friend?");
+                            break;
+                        case 4:
+                            System.out.println("Keep pressing that spacebar, it's making my day!");
+                            break;
+                        // Add the remaining troll sentences here...
+                        default:
+                            System.out.println("You are the spacebar champion!");
+                    }
+                } else {
+                    // Inform the user that they didn't press the spacebar
+                    System.out.println("You didn't press the spacebar!");
+                }
+            }
+
+            // Close the Scanner object
+            scanner.close();
+        }
+
+    private static class ExtraFunctionality {
         private int importantNumber;
 
         public ExtraFunctionality() {
@@ -94,4 +68,9 @@ public class Main { // Define the main class.
             System.out.println("Lorem ipsum dolor sit amet...");
         }
     }
+
+
+
+
+
 }
